@@ -94,27 +94,22 @@ session_start();
         .btn-red { background-color: #dc3545; }
     </style>
 </head>
+<script src="../js/eventFormValidation.js"></script>
 <body>
-<!-- START: InnovConnect Banner -->
-<header style="background: linear-gradient(to bottom, #0d1b4c, #2c66c6); color: white; padding: 20px 0;">
-    <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto; padding: 0 20px;">
-        <h1 style="font-size: 24px; font-weight: bold;">InterConnect</h1>
-        <nav style="display: flex; gap: 20px;">
-            <a href="#" style="color: white; text-decoration: none;">Entrepreneurs</a>
-            <a href="#" style="color: white; text-decoration: none;">Investisseurs</a>
-            <a href="#" style="color: white; text-decoration: none;">Projets</a>
-            <a href="#" style="color: white; text-decoration: none;">Contact</a>
-        </nav>
-        <div>
-            <img src="img.png" alt="Profil" style="width: 130px; height: 130px; border-radius: 0%; background-color: white; padding: 5px;">
-        </div>
-    </div>
-    <div style="text-align: center; margin-top: 30px;">
-        <h2 style="font-size: 32px; font-weight: bold;">Connecter les idées aux investisseurs</h2>
-        <p style="font-size: 16px; margin-top: 10px;">Une plateforme simple pour découvrir des projets innovants et financer l'avenir.</p>
-    </div>
+<header style="background-color:rgb(103, 141, 216); color: white; padding: 0.5rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+  <div style="display: flex; align-items: center; gap: 1rem;">
+    <img src="aaa.png" alt="EntreConnect Logo" style="height: 70px ">
+    <span style="font-size: 1rem;">EnterConnect@gmail.com</span>
+  </div>
+  <div style="display: flex; gap: 2rem; justify-content: center; flex: 1; font-weight: bold; font-size: 1.1rem;">
+    <a href="index.php" style="color: white; text-decoration: none;">Accueil</a>
+    <a href="projets.php" style="color: white; text-decoration: none;">Projets</a>
+    <a href="evenements.php" style="color: white; text-decoration: none;">Événements</a>
+    <a href="communication.php" style="color: white; text-decoration: none;">Communication</a>
+    <a href="contact.php" style="color: white; text-decoration: none;">Contact</a>
+  </div>
+  <div style="font-size: 0.9rem;">📞 010-020-0340</div>
 </header>
-<!-- END: InnovConnect Banner -->
 <div class="header">
     <!--<img src="img.png" alt="logo">-->
     <!--<h2>Gestion des Événements</h2>-->
@@ -150,6 +145,7 @@ session_start();
                 <a class="btn btn-green" href="participantForm.php?event_id=<?= $e['event_id'] ?>&event_date=<?= $e['event_date'] ?>">Participer</a>
                 <a class="btn btn-blue" href="editEventForm.php?event_id=<?= $e['event_id'] ?>">Edit</a>
                 <a class="btn btn-red" href="../controller/deleteEvent.php?event_id=<?= $e['event_id'] ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet événement ?')">Delete</a>
+                <a class="btn btn-red" href="../controller/deleteparticipation.php?event_id=<?= $e['event_id'] ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet événement ?')">Delete participation</a>
             </td>
         </tr>
     <?php endforeach; ?>
