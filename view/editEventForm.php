@@ -64,7 +64,6 @@ $event_data = $event->getById($event_id);
             margin-bottom: 10px;
             text-align: center;
         }
-
     </style>
 </head>
 <body>
@@ -75,6 +74,7 @@ $event_data = $event->getById($event_id);
     <input type="text" name="event_place" value="<?= $event_data['event_place'] ?>"><br>
     <input type="text" name="event_date" value="<?= $event_data['event_date'] ?>"><br>
     <button type="submit">Enregistrer</button>
+</form>
 </form>
 <?php if (!empty($_SESSION['errors'])): foreach ($_SESSION['errors'] as $error): ?>
     <p style="color:red;"><?= $error ?></p>

@@ -60,7 +60,29 @@ session_start();
             margin-bottom: 10px;
             text-align: center;
         }
+        .autofill-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .autofill-btn:hover {
+            background-color: #218838;
+        }
     </style>
+    <script>
+        function autofill() {
+            // Set predefined values for autofill
+            document.querySelector('input[name="event_name"]').value = "Autofilled Event Name";
+            document.querySelector('input[name="event_place"]').value = "Autofilled Event Place";
+            document.querySelector('input[name="event_date"]').value = "2025-12-31"; // Example date format
+        }
+    </script>
 </head>
 <body>
 <h2>Participate in Event</h2>
@@ -75,6 +97,7 @@ session_start();
         <option value="investisseur">Investisseur</option>
     </select><br>
     <button type="submit">Submit</button>
+    <button type="button" class="autofill-btn" onclick="autofill()">Autofill</button>
 </form>
 <?php if (!empty($_SESSION['errors'])): foreach ($_SESSION['errors'] as $error): ?>
     <p style="color:red;"><?= $error ?></p>
