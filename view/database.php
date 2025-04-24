@@ -1,13 +1,15 @@
 <?php
+
 $host = 'localhost';
-$db   = 'eventsdb';
-$user = 'root';
-$pass = '';
+$db = 'project';
+$username = 'root';
+$password = '';
+
 
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $db = new PDO("mysql:host=$host;dbname=$db", $username, $password);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    die("Connection failed: " . $e->getMessage());
+    echo 'Connection failed: ' . $e->getMessage();
 }
 ?>
