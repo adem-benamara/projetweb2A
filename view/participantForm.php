@@ -91,6 +91,7 @@ session_start();
     <input type="hidden" name="event_date" value="<?= $event_date ?>">
     <input type="text" name="participant_nom" placeholder="Nom"><br>
     <input type="text" name="participant_prenom" placeholder="Prénom"><br>
+    <input type="text" name="participant_email" placeholder="email"><br>
     <input type="text" name="age" placeholder="Age"><br>
     <select name="participant_metier">
         <option value="entrepreneur">Entrepreneur</option>

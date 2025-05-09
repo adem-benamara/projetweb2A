@@ -143,9 +143,9 @@ session_start();
             <td><?= $e['event_id'] ?></td>
             <td>
                 <a class="btn btn-green" href="participantForm.php?event_id=<?= $e['event_id'] ?>&event_date=<?= $e['event_date'] ?>">Participer</a>
-                <a class="btn btn-blue" href="editEventForm.php?event_id=<?= $e['event_id'] ?>">Edit</a>
+                <!--<<a class="btn btn-blue" href="editEventForm.php?event_id=<?= $e['event_id'] ?>">Edit</a>
                 <a class="btn btn-red" href="../controller/deleteEvent.php?event_id=<?= $e['event_id'] ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet événement ?')">Delete</a>
-                <a class="btn btn-red" href="../controller/deleteparticipation.php?event_id=<?= $e['event_id'] ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet événement ?')">Delete participation</a>
+                <a class="btn btn-red" href="../controller/deleteparticipation.php?event_id=<?= $e['event_id'] ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet événement ?')">Delete participation</a>>-->
             </td>
         </tr>
     <?php endforeach; ?>
